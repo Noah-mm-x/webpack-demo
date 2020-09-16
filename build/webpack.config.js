@@ -9,32 +9,16 @@ const glob = require("glob");
 const path = require("path");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const CompressionPlugin = require("compression-webpack-plugin");
-console.log("env", process.env.NODE_ENV);
 const website = {
   // publicPath: "http://localhost:8080/",
   publicPath: "",
 };
 module.exports = {
-  // mode: "development",
-  // devtool: "cheap-module-eval-source-map", // 生成source-map
-  mode: "production",
-  devtool: "cheap-module-source-map", 
-  entry: __dirname + "/app/main.js",
+  entry: __dirname + "/../app/main.js",
   output: {
-    path: __dirname + "/distTmp",
+    path: __dirname + "/../distTmp",
     filename: "bundle-[hash:5].js",
     publicPath: website.publicPath, //publicPath：主要作用就是处理静态文件路径的。
-  },
-  devServer: {
-    contentBase: "./dist", // 本地服务器所加载的页面所在的目录
-    // historyApiFallback: true, // 单页面应用路由切换时不跳转
-    host: "localhost",
-    inline: true, // 实时刷新
-    port: 8081, //启动时的端口号
-    hot: true, //热加载
-    // proxy: {
-    //   '/api': 'http://localhost: 3000'
-    // }
   },
   stats: {
     //简化打包信息

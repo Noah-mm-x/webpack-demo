@@ -1,16 +1,15 @@
 {
   "name": "web",
-  "sideEffects": ["*.css","*.less"],
+  "sideEffects": [
+    "*.css",
+    "*.less"
+  ],
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "fileBuild": "webpack-cli --entry ./app/main.js --output ./public/bundle.js",
-    "build": "webpack",
-    "build:online": "webpack && rm -rf dist && cp -rf distTmp dist",
-    "build:website": "webpack && rm -rf dist && cp -rf distTmp dist && node ./cdn.js",
-    "dev": "webpack-dev-server --open",
+    "dev": "webpack-dev-server --open --config ./build/webpack.dev.js",
+    "build": "webpack --config ./build/webpack.prod.js",
     "server": "node server.js --open"
   },
   "keywords": [],
@@ -48,7 +47,8 @@
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
     "webpack-dev-middleware": "^3.7.2",
-    "webpack-dev-server": "^3.11.0"
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^5.1.4"
   },
   "dependencies": {
     "@babel/polyfill": "^7.11.5",
