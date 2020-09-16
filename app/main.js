@@ -6,7 +6,7 @@ import "./style.less";
 import "./images/1.jpg";
 
 import { add } from "./index.js"
-add()
+add(12,3)
 
 // console.log(11);
 // let arr = {a:1,b:2}

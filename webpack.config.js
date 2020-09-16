@@ -15,9 +15,9 @@ const website = {
   publicPath: "",
 };
 module.exports = {
-  // mode: "production",
-  mode: "develo",
+  // mode: "development",
   // devtool: "cheap-module-eval-source-map", // 生成source-map
+  mode: "production",
   devtool: "cheap-module-source-map", 
   entry: __dirname + "/app/main.js",
   output: {
@@ -160,9 +160,9 @@ module.exports = {
     minimizer: [
       new OptimizeCSSAssetsPlugin({}),
       // 为方便看效果，先关闭压缩js代码插件
-      // new TerserPlugin({
-      //   test: /\.js(\?.*)?$/i,
-      // }),
+      new TerserPlugin({
+        test: /\.js(\?.*)?$/i,
+      }),
     ],
   },
 };
