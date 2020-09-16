@@ -1,0 +1,53 @@
+ul{
+  li{
+    font-size: 20px;
+    color: red;
+  }
+}
+.container{
+  height: 300px;
+  padding: 0 200px 0 300px;
+  min-width: 1200px;
+  >div{
+    float: left;
+    height: 300px;
+  }
+  .left{
+    position: relative;
+    width: 300px;
+    background: red;
+    margin-left: -100%;
+    left: -300px;
+  }
+  .center{
+    width: 100%;
+    background: green;
+  }
+  .right{
+    position: relative;
+    width: 200px;
+    margin-left: -200px;
+    left: 200px;
+    background: blue;
+  }
+}
+.container1{
+  height: 300px;
+  padding: 0 200px 0 0;
+  min-width: 1200px;
+  >div{
+    float: left;
+    height: 300px;
+  }
+  .center{
+    width: 100%;
+    background: pink;
+  }
+  .right{
+    position: relative;
+    width: 200px;
+    margin-left: -200px;
+    left: 200px;
+    background: #abcdef;
+  }
+}
