@@ -1,3 +1,5 @@
+// 配合@babel/preset-env使用
+// import "@babel/polyfill";
 // import './a.css'
 import "./common.css";
 import "./style.less";
