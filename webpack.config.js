@@ -15,14 +15,16 @@ const website = {
   publicPath: "",
 };
 module.exports = {
-  devtool: "cheap-module-eval-source-map", // 生成source-map
+  // mode: "production",
+  mode: "develo",
+  // devtool: "cheap-module-eval-source-map", // 生成source-map
+  devtool: "cheap-module-source-map", 
   entry: __dirname + "/app/main.js",
   output: {
     path: __dirname + "/distTmp",
     filename: "bundle-[hash:5].js",
     publicPath: website.publicPath, //publicPath：主要作用就是处理静态文件路径的。
   },
-  mode: "production",
   devServer: {
     contentBase: "./dist", // 本地服务器所加载的页面所在的目录
     // historyApiFallback: true, // 单页面应用路由切换时不跳转
@@ -154,11 +156,13 @@ module.exports = {
   ],
   optimization: {
     minimize: true,
+    usedExports: true, // Tree shaking用
     minimizer: [
       new OptimizeCSSAssetsPlugin({}),
-      new TerserPlugin({
-        test: /\.js(\?.*)?$/i,
-      }),
+      // 为方便看效果，先关闭压缩js代码插件
+      // new TerserPlugin({
+      //   test: /\.js(\?.*)?$/i,
+      // }),
     ],
   },
 };
