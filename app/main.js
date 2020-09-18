@@ -1,12 +1,12 @@
 // 配合@babel/preset-env使用
 // import "@babel/polyfill";
 // import './a.css'
-import "./common.css";
-import "./style.less";
-import "./images/1.jpg";
+// import "./common.css";
+// import "./style.less";
+// import "./images/1.jpg";
 
-import { add } from "./index.js"
-add(12,3)
+// import { add } from "./index.js"
+// add(12,3)
 
 // console.log(11);
 // let arr = {a:1,b:2}
@@ -15,5 +15,6 @@ add(12,3)
 // arr.map((item) => {
 //   console.log(item);
 // });
+
 
 

@@ -14,10 +14,13 @@ const website = {
   publicPath: "",
 };
 module.exports = {
-  entry: __dirname + "/../app/main.js",
+  entry: {
+    lodash: __dirname + "/../app/lodash.js",
+    main: __dirname + "/../app/main.js"
+  },
   output: {
     path: __dirname + "/../distTmp",
-    filename: "bundle-[hash:5].js",
+    filename: "[name]-[hash:5].js",
     publicPath: website.publicPath, //publicPath：主要作用就是处理静态文件路径的。
   },
   stats: {
@@ -144,9 +147,9 @@ module.exports = {
     minimizer: [
       new OptimizeCSSAssetsPlugin({}),
       // 为方便看效果，先关闭压缩js代码插件
-      new TerserPlugin({
-        test: /\.js(\?.*)?$/i,
-      }),
+      // new TerserPlugin({
+      //   test: /\.js(\?.*)?$/i,
+      // }),
     ],
   },
 };
