@@ -15,7 +15,7 @@ const website = {
 };
 module.exports = {
   entry: {
-    lodash: __dirname + "/../app/lodash.js",
+    // lodash: __dirname + "/../app/lodash.js",
     main: __dirname + "/../app/main.js"
   },
   output: {
@@ -116,6 +116,7 @@ module.exports = {
       template: "./app/index.html",
       // favicon: "./app/favicon.ico",
     }),
+    // 清理上次打包文件
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: "style.css",
@@ -125,12 +126,14 @@ module.exports = {
     //   //这里配置了一个paths，主要是需找html模板，purifycss根据这个配置会遍历你的文件，查找哪些css被使用了。
     //   paths: glob.sync(path.join(__dirname, "*.html")),
     // }),
+    // 压缩css
     new OptimizeCSSAssetsPlugin({
       assetNameRegExp: /\.less\.css$/g,
       cssProcessor: require("cssnano"),
       cssProcessorOptions: { discardComments: { removeAll: true } },
       canPrint: true,
     }),
+    // 开启gzip压缩
     new CompressionPlugin({
       filename: '[path].gz[query]', //目标资源名称。[file] 会被替换成原资源。[path] 会被替换成原资源路径，[query] 替换成原查询字符串
       algorithm: "gzip", //算法
@@ -151,5 +154,9 @@ module.exports = {
       //   test: /\.js(\?.*)?$/i,
       // }),
     ],
+    // 代码分割
+    // splitChunks: {
+    //   chunks: 'all'
+    // }
   },
 };
