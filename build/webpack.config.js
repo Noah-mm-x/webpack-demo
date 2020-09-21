@@ -37,6 +37,7 @@ module.exports = {
       {
         test: /\.css$/,
         use: [
+          // "style-loader",
           {
             loader: MiniCssExtractPlugin.loader,
           },
@@ -48,6 +49,7 @@ module.exports = {
       {
         test: /\.less$/,
         use: [
+          // "style-loader",
           {
             loader: MiniCssExtractPlugin.loader,
             options: {

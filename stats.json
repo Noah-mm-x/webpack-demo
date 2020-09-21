@@ -3,8 +3,8 @@
   "warnings": [],
   "version": "4.44.1",
   "hash": "98f2b424660d00cc329e",
-  "time": 1737,
-  "builtAt": 1600682448176,
+  "time": 1775,
+  "builtAt": 1600683159181,
   "publicPath": "",
   "outputPath": "/Users/mengfanxu/study/webpack-demo/build/../distTmp",
   "assetsByChunkName": {
@@ -124,7 +124,7 @@
       "issuerPath": null,
       "profile": {
         "factory": 43,
-        "building": 304
+        "building": 307
       },
       "failed": false,
       "errors": 0,
@@ -173,13 +173,13 @@
           "name": "./app/main.js",
           "profile": {
             "factory": 43,
-            "building": 304
+            "building": 307
           }
         }
       ],
       "profile": {
-        "factory": 51,
-        "building": 886
+        "factory": 57,
+        "building": 818
       },
       "failed": false,
       "errors": 0,
@@ -228,13 +228,13 @@
           "name": "./app/main.js",
           "profile": {
             "factory": 43,
-            "building": 304
+            "building": 307
           }
         }
       ],
       "profile": {
-        "factory": 51,
-        "building": 886
+        "factory": 57,
+        "building": 818
       },
       "failed": false,
       "errors": 0,
@@ -282,7 +282,7 @@
           "name": "./app/main.js",
           "profile": {
             "factory": 43,
-            "building": 304
+            "building": 307
           }
         },
         {
@@ -290,8 +290,8 @@
           "identifier": "/Users/mengfanxu/study/webpack-demo/node_modules/mini-css-extract-plugin/dist/loader.js!/Users/mengfanxu/study/webpack-demo/node_modules/css-loader/dist/cjs.js!/Users/mengfanxu/study/webpack-demo/app/style1.css",
           "name": "./app/style1.css",
           "profile": {
-            "factory": 51,
-            "building": 886
+            "factory": 57,
+            "building": 818
           }
         }
       ],
@@ -341,7 +341,7 @@
           "name": "./app/main.js",
           "profile": {
             "factory": 43,
-            "building": 304
+            "building": 307
           }
         },
         {
@@ -349,8 +349,8 @@
           "identifier": "/Users/mengfanxu/study/webpack-demo/node_modules/mini-css-extract-plugin/dist/loader.js??ref--5-0!/Users/mengfanxu/study/webpack-demo/node_modules/css-loader/dist/cjs.js!/Users/mengfanxu/study/webpack-demo/node_modules/postcss-loader/dist/cjs.js!/Users/mengfanxu/study/webpack-demo/node_modules/less-loader/dist/cjs.js!/Users/mengfanxu/study/webpack-demo/app/style.less",
           "name": "./app/style.less",
           "profile": {
-            "factory": 51,
-            "building": 886
+            "factory": 57,
+            "building": 818
           }
         }
       ],
