@@ -111,7 +111,7 @@ module.exports = {
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: "style.css",
-      chunkFilename: "[name].chunk.css"
+      // chunkFilename: "[name].chunk.css"
     }),
     // new uglify(),
     // new PurifyCSSPlugin({
