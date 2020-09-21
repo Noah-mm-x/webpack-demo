@@ -32,12 +32,19 @@
 //   })
 // })
 // Preloading
-document.addEventListener('click', () => {
-  // const el = document.createElement('div')
-  // el.innerHTML = '我爱学习，学习使我快乐'
-  // document.body.appendChild(el)
-  import('./click.js').then(({ default: fnc }) => {
-    fnc()
-  })
-})
-
+// document.addEventListener('click', () => {
+//   // const el = document.createElement('div')
+//   // el.innerHTML = '我爱学习，学习使我快乐'
+//   // document.body.appendChild(el)
+//   import('./click.js').then(({ default: fnc }) => {
+//     fnc()
+//   })
+// })
+// Prefetching
+// document.addEventListener('click', () => {
+//   import(/* webpackPrefetch: true */ './click.js').then(({ default: fnc }) => {
+//     fnc()
+//   })
+// })
+// css代码分割
+import "./style.less";

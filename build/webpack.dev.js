@@ -16,7 +16,7 @@ const devConfig = {
     // }
   },
   optimization: {
-    usedExports: true, // Tree shaking用
+    // usedExports: true, // Tree shaking用
   },
 };
 module.exports = merge(config, devConfig)

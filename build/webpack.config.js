@@ -23,6 +23,7 @@ module.exports = {
     path: __dirname + "/../distTmp",
     filename: "[name]-[hash:5].js",
     publicPath: website.publicPath, //publicPath：主要作用就是处理静态文件路径的。
+    chunkFilename: '[name].chunk.js'
   },
   stats: {
     //简化打包信息
@@ -157,28 +158,28 @@ module.exports = {
       // }),
     ],
     // 代码分割
-    // splitChunks: {
-    //   chunks: "all",
-    //   minSize: 30000,
-    //   maxSize: 50000,
-    //   minChunks: 1,
-    //   maxAsyncRequests: 5,
-    //   maxInitialRequests: 3,
-    //   automaticNameDelimiter: '~',
-    //   name: true,
-    //   cacheGroups: {
-    //     vendors: {
-    //       test: /[\\/]node_modules[\\/]/,
-    //       priority: -10,
-    //       // filename: 'vendors.js',
-    //     },
-    //     default: {
-    //       minChunks: 2,
-    //       priority: -20,
-    //       reuseExistingChunk: true,
-    //       filename: 'vendors.js',
-    //     }
-    //   }
-    // }
+    splitChunks: {
+      chunks: "all",
+      // minSize: 30000,
+      // maxSize: 50000,
+      // minChunks: 1,
+      // maxAsyncRequests: 5,
+      // maxInitialRequests: 3,
+      // automaticNameDelimiter: '~',
+      // name: true,
+      // cacheGroups: {
+      //   vendors: {
+      //     test: /[\\/]node_modules[\\/]/,
+      //     priority: -10,
+      //     // filename: 'vendors.js',
+      //   },
+      //   default: {
+      //     minChunks: 2,
+      //     priority: -20,
+      //     reuseExistingChunk: true,
+      //     filename: 'vendors.js',
+      //   }
+      // }
+    }
   },
 };
