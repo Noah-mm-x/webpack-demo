@@ -53,7 +53,7 @@ module.exports = {
           // "style-loader",
           {
             loader: MiniCssExtractPlugin.loader,
-            options: {
+            options: { 
               importLoaders: 2, //  使less中引入less可用
             },
           },

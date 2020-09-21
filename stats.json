@@ -2,16 +2,16 @@
   "errors": [],
   "warnings": [],
   "version": "4.44.1",
-  "hash": "98f2b424660d00cc329e",
-  "time": 1860,
-  "builtAt": 1600683704524,
+  "hash": "4dceacb0ffd38d7b038d",
+  "time": 2301,
+  "builtAt": 1600684814534,
   "publicPath": "",
   "outputPath": "/Users/mengfanxu/study/webpack-demo/build/../distTmp",
   "assetsByChunkName": {
     "main": [
       "style.css",
-      "main-98f2b.js",
-      "main-98f2b.js.map"
+      "main-4dcea.js",
+      "main-4dcea.js.map"
     ]
   },
   "assets": [
@@ -34,7 +34,7 @@
       "emitted": true
     },
     {
-      "name": "main-98f2b.js",
+      "name": "main-4dcea.js",
       "size": 5806,
       "chunks": [
         0
@@ -48,7 +48,7 @@
       "emitted": true
     },
     {
-      "name": "main-98f2b.js.map",
+      "name": "main-4dcea.js.map",
       "size": 5397,
       "chunks": [
         0
@@ -82,8 +82,8 @@
       ],
       "assets": [
         "style.css",
-        "main-98f2b.js",
-        "main-98f2b.js.map"
+        "main-4dcea.js",
+        "main-4dcea.js.map"
       ],
       "children": {},
       "childAssets": {}
@@ -96,8 +96,8 @@
       ],
       "assets": [
         "style.css",
-        "main-98f2b.js",
-        "main-98f2b.js.map"
+        "main-4dcea.js",
+        "main-4dcea.js.map"
       ],
       "children": {},
       "childAssets": {}
@@ -123,8 +123,8 @@
       "issuerName": null,
       "issuerPath": null,
       "profile": {
-        "factory": 41,
-        "building": 340
+        "factory": 44,
+        "building": 444
       },
       "failed": false,
       "errors": 0,
@@ -172,14 +172,14 @@
           "identifier": "/Users/mengfanxu/study/webpack-demo/node_modules/babel-loader/lib/index.js!/Users/mengfanxu/study/webpack-demo/app/main.js",
           "name": "./app/main.js",
           "profile": {
-            "factory": 41,
-            "building": 340
+            "factory": 44,
+            "building": 444
           }
         }
       ],
       "profile": {
-        "factory": 50,
-        "building": 950
+        "factory": 53,
+        "building": 1148
       },
       "failed": false,
       "errors": 0,
@@ -227,14 +227,14 @@
           "identifier": "/Users/mengfanxu/study/webpack-demo/node_modules/babel-loader/lib/index.js!/Users/mengfanxu/study/webpack-demo/app/main.js",
           "name": "./app/main.js",
           "profile": {
-            "factory": 41,
-            "building": 340
+            "factory": 44,
+            "building": 444
           }
         }
       ],
       "profile": {
-        "factory": 50,
-        "building": 950
+        "factory": 53,
+        "building": 1148
       },
       "failed": false,
       "errors": 0,
@@ -281,8 +281,8 @@
           "identifier": "/Users/mengfanxu/study/webpack-demo/node_modules/babel-loader/lib/index.js!/Users/mengfanxu/study/webpack-demo/app/main.js",
           "name": "./app/main.js",
           "profile": {
-            "factory": 41,
-            "building": 340
+            "factory": 44,
+            "building": 444
           }
         },
         {
@@ -290,13 +290,13 @@
           "identifier": "/Users/mengfanxu/study/webpack-demo/node_modules/mini-css-extract-plugin/dist/loader.js!/Users/mengfanxu/study/webpack-demo/node_modules/css-loader/dist/cjs.js!/Users/mengfanxu/study/webpack-demo/app/style1.css",
           "name": "./app/style1.css",
           "profile": {
-            "factory": 50,
-            "building": 950
+            "factory": 53,
+            "building": 1148
           }
         }
       ],
       "profile": {
-        "factory": 1,
+        "factory": 0,
         "building": 0
       },
       "failed": false,
@@ -340,8 +340,8 @@
           "identifier": "/Users/mengfanxu/study/webpack-demo/node_modules/babel-loader/lib/index.js!/Users/mengfanxu/study/webpack-demo/app/main.js",
           "name": "./app/main.js",
           "profile": {
-            "factory": 41,
-            "building": 340
+            "factory": 44,
+            "building": 444
           }
         },
         {
@@ -349,8 +349,8 @@
           "identifier": "/Users/mengfanxu/study/webpack-demo/node_modules/mini-css-extract-plugin/dist/loader.js??ref--5-0!/Users/mengfanxu/study/webpack-demo/node_modules/css-loader/dist/cjs.js!/Users/mengfanxu/study/webpack-demo/node_modules/postcss-loader/dist/cjs.js!/Users/mengfanxu/study/webpack-demo/node_modules/less-loader/dist/cjs.js!/Users/mengfanxu/study/webpack-demo/app/style.less",
           "name": "./app/style.less",
           "profile": {
-            "factory": 50,
-            "building": 950
+            "factory": 53,
+            "building": 1148
           }
         }
       ],
