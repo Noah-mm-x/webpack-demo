@@ -15,17 +15,29 @@
 // arr.map((item) => {
 //   console.log(item);
 // });
+
 // import _ from 'lodash'
-// window._ = _
-// console.log(_.join([1,2,3],'***'));
-function getComponent() {
-  return import(/* webpackChunkName: "lodash" */'lodash').then(({ default: _ }) => {
-    var el = document.createElement('div')
-    el.innerHTML = _.join([111, 222], '-')
-    return el
+
+// 懒加载
+// async function getComponent() {
+//   const { default: _ } = await import(/* webpackChunkName: "lodash" */ 'lodash')
+//   const el = document.createElement('div')
+//   el.innerHTML = _.join([111, 222], '-')
+//   return el
+// }
+
+// document.addEventListener('click', () => {
+//   getComponent().then(el => {
+//     document.body.appendChild(el);
+//   })
+// })
+// Preloading
+document.addEventListener('click', () => {
+  // const el = document.createElement('div')
+  // el.innerHTML = '我爱学习，学习使我快乐'
+  // document.body.appendChild(el)
+  import('./click.js').then(({ default: fnc }) => {
+    fnc()
   })
-}
-getComponent().then(el => {
-  document.body.appendChild(el);
 })
 

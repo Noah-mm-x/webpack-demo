@@ -9,6 +9,7 @@ const glob = require("glob");
 const path = require("path");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const CompressionPlugin = require("compression-webpack-plugin");
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const website = {
   // publicPath: "http://localhost:8080/",
   publicPath: "",
@@ -134,15 +135,16 @@ module.exports = {
       canPrint: true,
     }),
     // 开启gzip压缩
-    // new CompressionPlugin({
-    //   filename: '[path].gz[query]', //目标资源名称。[file] 会被替换成原资源。[path] 会被替换成原资源路径，[query] 替换成原查询字符串
-    //   algorithm: "gzip", //算法
-    //   test: new RegExp(
-    //     "\\.(js|css)$" //压缩 js 与 css
-    //   ),
-    //   threshold: 10240, //只处理比这个值大的资源。按字节计算
-    //   minRatio: 0.8, //只有压缩率比这个值小的资源才会被处理
-    // }),
+    new CompressionPlugin({
+      filename: '[path].gz[query]', //目标资源名称。[file] 会被替换成原资源。[path] 会被替换成原资源路径，[query] 替换成原查询字符串
+      algorithm: "gzip", //算法
+      test: new RegExp(
+        "\\.(js|css)$" //压缩 js 与 css
+      ),
+      threshold: 10240, //只处理比这个值大的资源。按字节计算
+      minRatio: 0.8, //只有压缩率比这个值小的资源才会被处理
+    }),
+    // new BundleAnalyzerPlugin()
   ],
   optimization: {
     minimize: true,
@@ -155,28 +157,28 @@ module.exports = {
       // }),
     ],
     // 代码分割
-    splitChunks: {
-      chunks: "all",
-      minSize: 30000,
-      maxSize: 50000,
-      minChunks: 1,
-      maxAsyncRequests: 5,
-      maxInitialRequests: 3,
-      automaticNameDelimiter: '~',
-      name: true,
-      cacheGroups: {
-        vendors: {
-          test: /[\\/]node_modules[\\/]/,
-          priority: -10,
-          // filename: 'vendors.js',
-        },
-        default: {
-          minChunks: 2,
-          priority: -20,
-          reuseExistingChunk: true,
-          filename: 'vendors.js',
-        }
-      }
-    }
+    // splitChunks: {
+    //   chunks: "all",
+    //   minSize: 30000,
+    //   maxSize: 50000,
+    //   minChunks: 1,
+    //   maxAsyncRequests: 5,
+    //   maxInitialRequests: 3,
+    //   automaticNameDelimiter: '~',
+    //   name: true,
+    //   cacheGroups: {
+    //     vendors: {
+    //       test: /[\\/]node_modules[\\/]/,
+    //       priority: -10,
+    //       // filename: 'vendors.js',
+    //     },
+    //     default: {
+    //       minChunks: 2,
+    //       priority: -20,
+    //       reuseExistingChunk: true,
+    //       filename: 'vendors.js',
+    //     }
+    //   }
+    // }
   },
 };

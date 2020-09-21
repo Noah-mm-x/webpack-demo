@@ -1,0 +1,196 @@
+{
+  "errors": [],
+  "warnings": [],
+  "version": "4.44.1",
+  "hash": "6f7f47cffb644919f121",
+  "time": 670,
+  "builtAt": 1600673064479,
+  "publicPath": "",
+  "outputPath": "/Users/mengfanxu/study/webpack-demo/build/../distTmp",
+  "assetsByChunkName": {
+    "main": "main-6f7f4.js"
+  },
+  "assets": [
+    {
+      "name": "1-6f7f4.js",
+      "size": 1027,
+      "chunks": [
+        1
+      ],
+      "chunkNames": [],
+      "info": {
+        "immutable": true
+      },
+      "emitted": true
+    },
+    {
+      "name": "images/427b1fdec7c625672b676392bd67424e.jpg",
+      "size": 82504,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "immutable": true
+      },
+      "emitted": true
+    },
+    {
+      "name": "index.html",
+      "size": 702,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": true
+    },
+    {
+      "name": "main-6f7f4.js",
+      "size": 11211,
+      "chunks": [
+        0
+      ],
+      "chunkNames": [
+        "main"
+      ],
+      "info": {
+        "immutable": true
+      },
+      "emitted": true
+    }
+  ],
+  "filteredAssets": 0,
+  "entrypoints": {
+    "main": {
+      "chunks": [
+        0
+      ],
+      "assets": [
+        "main-6f7f4.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    }
+  },
+  "namedChunkGroups": {
+    "main": {
+      "chunks": [
+        0
+      ],
+      "assets": [
+        "main-6f7f4.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    }
+  },
+  "modules": [
+    {
+      "id": 0,
+      "identifier": "/Users/mengfanxu/study/webpack-demo/node_modules/babel-loader/lib/index.js!/Users/mengfanxu/study/webpack-demo/app/main.js",
+      "name": "./app/main.js",
+      "index": 0,
+      "index2": 0,
+      "size": 927,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0
+      ],
+      "issuer": null,
+      "issuerId": null,
+      "issuerName": null,
+      "issuerPath": null,
+      "profile": {
+        "factory": 45,
+        "building": 405
+      },
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "assets": [],
+      "reasons": [
+        {
+          "moduleId": null,
+          "moduleIdentifier": null,
+          "module": null,
+          "moduleName": null,
+          "type": "single entry",
+          "userRequest": "/Users/mengfanxu/study/webpack-demo/build/../app/main.js",
+          "loc": "main"
+        }
+      ],
+      "usedExports": true,
+      "providedExports": null,
+      "optimizationBailout": [
+        "ModuleConcatenation bailout: Module is not an ECMAScript module"
+      ],
+      "depth": 0,
+      "source": "// 配合@babel/preset-env使用\n// import \"@babel/polyfill\";\n// import './a.css'\n// import \"./common.css\";\n// import \"./style.less\";\n// import \"./images/1.jpg\";\n// import { add } from \"./index.js\"\n// add(12,3)\n// console.log(11);\n// let arr = {a:1,b:2}\n// console.log(...arr);\n// let arr = [new Promise(() => {}), new Promise(() => {})];\n// arr.map((item) => {\n//   console.log(item);\n// });\n// import _ from 'lodash'\n// 懒加载\n// async function getComponent() {\n//   const { default: _ } = await import(/* webpackChunkName: \"lodash\" */ 'lodash')\n//   const el = document.createElement('div')\n//   el.innerHTML = _.join([111, 222], '-')\n//   return el\n// }\n// document.addEventListener('click', () => {\n//   getComponent().then(el => {\n//     document.body.appendChild(el);\n//   })\n// })\n// Preloading\ndocument.addEventListener('click', () => {\n  import('./click.js').then(({\n    default: fnc\n  }) => {\n    fnc();\n  });\n});"
+    },
+    {
+      "id": 1,
+      "identifier": "/Users/mengfanxu/study/webpack-demo/node_modules/babel-loader/lib/index.js!/Users/mengfanxu/study/webpack-demo/app/click.js",
+      "name": "./app/click.js",
+      "index": 1,
+      "index2": 1,
+      "size": 166,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        1
+      ],
+      "issuer": "/Users/mengfanxu/study/webpack-demo/node_modules/babel-loader/lib/index.js!/Users/mengfanxu/study/webpack-demo/app/main.js",
+      "issuerId": 0,
+      "issuerName": "./app/main.js",
+      "issuerPath": [
+        {
+          "id": 0,
+          "identifier": "/Users/mengfanxu/study/webpack-demo/node_modules/babel-loader/lib/index.js!/Users/mengfanxu/study/webpack-demo/app/main.js",
+          "name": "./app/main.js",
+          "profile": {
+            "factory": 45,
+            "building": 405
+          }
+        }
+      ],
+      "profile": {
+        "factory": 2,
+        "building": 33
+      },
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "assets": [],
+      "reasons": [
+        {
+          "moduleId": 0,
+          "moduleIdentifier": "/Users/mengfanxu/study/webpack-demo/node_modules/babel-loader/lib/index.js!/Users/mengfanxu/study/webpack-demo/app/main.js",
+          "module": "./app/main.js",
+          "moduleName": "./app/main.js",
+          "type": "import()",
+          "userRequest": "./click.js",
+          "loc": "31:2-22"
+        }
+      ],
+      "usedExports": true,
+      "providedExports": [
+        "default"
+      ],
+      "optimizationBailout": [
+        "ModuleConcatenation bailout: Module is referenced from these modules with unsupported syntax: ./app/main.js (referenced with import())"
+      ],
+      "depth": 1,
+      "source": "function handleClick() {\n  const el = document.createElement('div');\n  el.innerHTML = '我爱学习，学习使我快乐';\n  return el;\n}\n\nexport default handleClick;"
+    }
+  ],
+  "filteredModules": 0,
+  "logging": {
+    "webpack.buildChunkGraph.visitModules": {
+      "entries": [],
+      "filteredEntries": 5,
+      "debug": false
+    }
+  }
+}
