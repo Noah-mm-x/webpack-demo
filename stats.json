@@ -3,8 +3,8 @@
   "warnings": [],
   "version": "4.44.1",
   "hash": "98f2b424660d00cc329e",
-  "time": 1775,
-  "builtAt": 1600683159181,
+  "time": 1860,
+  "builtAt": 1600683704524,
   "publicPath": "",
   "outputPath": "/Users/mengfanxu/study/webpack-demo/build/../distTmp",
   "assetsByChunkName": {
@@ -123,8 +123,8 @@
       "issuerName": null,
       "issuerPath": null,
       "profile": {
-        "factory": 43,
-        "building": 307
+        "factory": 41,
+        "building": 340
       },
       "failed": false,
       "errors": 0,
@@ -172,14 +172,14 @@
           "identifier": "/Users/mengfanxu/study/webpack-demo/node_modules/babel-loader/lib/index.js!/Users/mengfanxu/study/webpack-demo/app/main.js",
           "name": "./app/main.js",
           "profile": {
-            "factory": 43,
-            "building": 307
+            "factory": 41,
+            "building": 340
           }
         }
       ],
       "profile": {
-        "factory": 57,
-        "building": 818
+        "factory": 50,
+        "building": 950
       },
       "failed": false,
       "errors": 0,
@@ -227,14 +227,14 @@
           "identifier": "/Users/mengfanxu/study/webpack-demo/node_modules/babel-loader/lib/index.js!/Users/mengfanxu/study/webpack-demo/app/main.js",
           "name": "./app/main.js",
           "profile": {
-            "factory": 43,
-            "building": 307
+            "factory": 41,
+            "building": 340
           }
         }
       ],
       "profile": {
-        "factory": 57,
-        "building": 818
+        "factory": 50,
+        "building": 950
       },
       "failed": false,
       "errors": 0,
@@ -281,8 +281,8 @@
           "identifier": "/Users/mengfanxu/study/webpack-demo/node_modules/babel-loader/lib/index.js!/Users/mengfanxu/study/webpack-demo/app/main.js",
           "name": "./app/main.js",
           "profile": {
-            "factory": 43,
-            "building": 307
+            "factory": 41,
+            "building": 340
           }
         },
         {
@@ -290,13 +290,13 @@
           "identifier": "/Users/mengfanxu/study/webpack-demo/node_modules/mini-css-extract-plugin/dist/loader.js!/Users/mengfanxu/study/webpack-demo/node_modules/css-loader/dist/cjs.js!/Users/mengfanxu/study/webpack-demo/app/style1.css",
           "name": "./app/style1.css",
           "profile": {
-            "factory": 57,
-            "building": 818
+            "factory": 50,
+            "building": 950
           }
         }
       ],
       "profile": {
-        "factory": 0,
+        "factory": 1,
         "building": 0
       },
       "failed": false,
@@ -340,8 +340,8 @@
           "identifier": "/Users/mengfanxu/study/webpack-demo/node_modules/babel-loader/lib/index.js!/Users/mengfanxu/study/webpack-demo/app/main.js",
           "name": "./app/main.js",
           "profile": {
-            "factory": 43,
-            "building": 307
+            "factory": 41,
+            "building": 340
           }
         },
         {
@@ -349,8 +349,8 @@
           "identifier": "/Users/mengfanxu/study/webpack-demo/node_modules/mini-css-extract-plugin/dist/loader.js??ref--5-0!/Users/mengfanxu/study/webpack-demo/node_modules/css-loader/dist/cjs.js!/Users/mengfanxu/study/webpack-demo/node_modules/postcss-loader/dist/cjs.js!/Users/mengfanxu/study/webpack-demo/node_modules/less-loader/dist/cjs.js!/Users/mengfanxu/study/webpack-demo/app/style.less",
           "name": "./app/style.less",
           "profile": {
-            "factory": 57,
-            "building": 818
+            "factory": 50,
+            "building": 950
           }
         }
       ],

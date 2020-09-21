@@ -1,3 +1,4 @@
+const webpack = require('webpack')
 const HTMLWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 // const uglify = require("uglifyjs-webpack-plugin"); //压缩js
@@ -135,6 +136,12 @@ module.exports = {
       minRatio: 0.8, //只有压缩率比这个值小的资源才会被处理
     }),
     // new BundleAnalyzerPlugin()
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      'window.jQuery': 'jquery',
+      'window.$': 'jquery',
+    }),
   ],
   optimization: {
     minimize: true,
