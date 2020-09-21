@@ -39,13 +39,6 @@ module.exports = {
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
-            // options: {
-            //   // only enable hot in development
-            //   hmr: process.env.NODE_ENV === "development",
-            //   // if hmr does not work, this is a forceful method.
-            //   reloadAll: true,
-            //   publicPath: "/",
-            // },
           },
           "css-loader",
           // 这个插件好像不用这个，引入就报错
@@ -57,13 +50,6 @@ module.exports = {
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
-            // options: {
-            //   // only enable hot in development
-            //   hmr: process.env.NODE_ENV === "development",
-            //   // if hmr does not work, this is a forceful method.
-            //   reloadAll: true,
-            //   publicPath: "/",
-            // },
             options: {
               importLoaders: 2, //  使less中引入less可用
             },
@@ -122,6 +108,7 @@ module.exports = {
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: "style.css",
+      chunkFilename: "[name].chunk.css"
     }),
     // new uglify(),
     // new PurifyCSSPlugin({
@@ -130,10 +117,10 @@ module.exports = {
     // }),
     // 压缩css
     new OptimizeCSSAssetsPlugin({
-      assetNameRegExp: /\.less\.css$/g,
-      cssProcessor: require("cssnano"),
-      cssProcessorOptions: { discardComments: { removeAll: true } },
-      canPrint: true,
+      assetNameRegExp: /\.css$/g, //用于匹配需要优化或者压缩的资源名
+      cssProcessor: require("cssnano"), //用于压缩和优化CSS 的处理器  
+      cssProcessorOptions: { discardComments: { removeAll: true } }, //去除注释
+      canPrint: true, //表示插件能够在console中打印信息
     }),
     // 开启gzip压缩
     new CompressionPlugin({
@@ -157,6 +144,7 @@ module.exports = {
       //   test: /\.js(\?.*)?$/i,
       // }),
     ],
+    usedExports: true,
     // 代码分割
     splitChunks: {
       chunks: "all",

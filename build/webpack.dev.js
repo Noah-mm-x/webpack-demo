@@ -3,7 +3,7 @@ const merge = require('webpack-merge').merge
 const config = require('./webpack.config.js')
 const devConfig = {
   mode: "development",
-  devtool: "cheap-module-eval-source-map", // 生成source-map
+  devtool: "cheap-module-source-map", // 生成source-map
   devServer: {
     contentBase: "./dist", // 本地服务器所加载的页面所在的目录
     // historyApiFallback: true, // 单页面应用路由切换时不跳转

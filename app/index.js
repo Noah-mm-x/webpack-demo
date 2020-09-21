@@ -6,5 +6,5 @@
 // export const minus = (a, b) => {
 //   console.log(a - b);
 // }
-
+console.log('index');
 
