@@ -47,9 +47,16 @@
 //   })
 // })
 // css代码分割
-import "./style.less";
-import "./style1.css";
-console.log('main');
-import img from '@img/1.jpg'
-// import img from './images/1.jpg'
-console.log(img);
+// import "./style.less";
+// import "./style1.css";
+// console.log('main');
+// import img from '@img/1.jpg'
+// // import img from './images/1.jpg'
+// console.log(img);
+
+// caching
+// import _ from "lodash"
+// import $ from "jquery"
+// const dom = $('<div>')
+// dom.html(_.join([111, 'aaa11'], ' '))
+// $('body').append(dom)

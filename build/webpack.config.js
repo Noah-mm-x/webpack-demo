@@ -22,9 +22,9 @@ module.exports = {
   },
   output: {
     path: __dirname + "/../distTmp",
-    filename: "[name]-[hash:5].js",
+    filename: "[name].[contenthash:5].js",
     publicPath: website.publicPath, //publicPath：主要作用就是处理静态文件路径的。
-    chunkFilename: '[name].chunk.js'
+    // chunkFilename: '[name].[contenthash:5].js'
   },
   resolve:{
     extensions: ['.js','.json'],
@@ -151,6 +151,9 @@ module.exports = {
     }),
   ],
   optimization: {
+    runtimeChunk: {
+      name: 'runtime'
+    },
     minimize: true,
     usedExports: true, // Tree shaking用
     minimizer: [
@@ -171,12 +174,13 @@ module.exports = {
       // maxInitialRequests: 3,
       // automaticNameDelimiter: '~',
       // name: true,
-      // cacheGroups: {
-      //   vendors: {
-      //     test: /[\\/]node_modules[\\/]/,
-      //     priority: -10,
-      //     // filename: 'vendors.js',
-      //   },
+      cacheGroups: {
+        vendors: {
+          test: /[\\/]node_modules[\\/]/,
+          priority: -10,
+          filename: 'vendors.[contenthash:5].js',
+        },
+      }
       //   default: {
       //     minChunks: 2,
       //     priority: -20,
@@ -184,6 +188,8 @@ module.exports = {
       //     filename: 'vendors.js',
       //   }
       // }
-    }
+    },
   },
+  // 不提示包过大的警告信息
+  performance: false
 };
