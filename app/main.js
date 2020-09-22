@@ -62,7 +62,9 @@
 // $('body').append(dom)
 
 // shimming
-import _ from "lodash"
-import $ from "jquery"
-import { ui } from './ui'
-ui()
+// import _ from "lodash"
+// import $ from "jquery"
+// import { ui } from './ui'
+// ui()
+// require('imports-loader?this=>window');
+console.log(this);

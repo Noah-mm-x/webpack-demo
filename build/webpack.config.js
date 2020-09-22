@@ -26,10 +26,10 @@ module.exports = {
     publicPath: website.publicPath, //publicPath：主要作用就是处理静态文件路径的。
     // chunkFilename: '[name].[contenthash:5].js'
   },
-  resolve:{
-    extensions: ['.js','.json'],
-    alias:{
-      '@img': path.resolve(__dirname,'../app/images/')
+  resolve: {
+    extensions: ['.js', '.json'],
+    alias: {
+      '@img': path.resolve(__dirname, '../app/images/')
       // '@img': '../app/images/'
     }
   },
@@ -60,7 +60,7 @@ module.exports = {
           // "style-loader",
           {
             loader: MiniCssExtractPlugin.loader,
-            options: { 
+            options: {
               importLoaders: 2, //  使less中引入less可用
             },
           },
@@ -93,11 +93,30 @@ module.exports = {
       },
       {
         test: /\.(jsx|js)$/,
-        use: {
-          loader: "babel-loader",
-        },
         exclude: /node_modules/,
+        use: [
+          {
+            loader: 'babel-loader',
+          },
+        ]
       },
+      {
+        test: require.resolve('./../app/main.js'),
+        use: {
+          // 这种方法会报错
+          // {
+          //   loader: "imports-loader?this=>window",
+          // }
+          loader: 'imports-loader',
+          options: {
+            // imports: {
+            //   moduleName: 'jquery',
+            //   name: '$',
+            // },
+            wrapper: 'window',
+          }
+        }
+      }
     ],
   },
   plugins: [
@@ -148,13 +167,13 @@ module.exports = {
       jQuery: 'jquery',
       'window.jQuery': 'jquery',
       'window.$': 'jquery',
-      _join: ['lodash','join']
+      _join: ['lodash', 'join']
     }),
   ],
   optimization: {
-    runtimeChunk: {
-      name: 'runtime'
-    },
+    // runtimeChunk: {
+    //   name: 'runtime'
+    // },
     minimize: true,
     usedExports: true, // Tree shaking用
     minimizer: [

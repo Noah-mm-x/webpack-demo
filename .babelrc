@@ -1,41 +1,21 @@
 {
-  "plugins": [
+  "presets": [
     [
-      "@babel/plugin-transform-runtime",
+      "@babel/preset-env",
       {
-        // "absoluteRuntime": false,
-        "corejs": 2,
-        "helpers": true,
-        "regenerator": true,
-        "useESModules": false,
-        // "version": "7.0.0-beta.0"
+        "targets": { //可进一步减少包的体积
+          "edge": "17",
+          "firefox": "60",
+          "chrome": "67",
+          "safari": "11.1"
+        },
+        "useBuiltIns": "usage", //减少包的体积
+        "corejs": 3
       }
     ],
-    // "@babel/plugin-syntax-dynamic-import"
+    "@babel/preset-react"
+  ],
+  "plugins": [
+    "@babel/plugin-syntax-dynamic-import"
   ]
 }
-// options: {
-// presets: [['@babel/preset-env', {
-//   targets: { //可进一步减少包的体积
-//     "edge": "17",
-//     "firefox": "60",
-//     "chrome": "67", 
-//     "safari": "11.1",
-//   },
-//   useBuiltIns: 'usage' //减少包的体积
-// }]],
-// 下面这种适合开发组件库时候用，因为不会污染，而preset-env polyfill会污染全局环境
-// "plugins": [
-//   [
-//     "@babel/plugin-transform-runtime",
-//     {
-//       "absoluteRuntime": false,
-//       "corejs": 2,
-//       "helpers": true,
-//       "regenerator": true,
-//       "useESModules": false,
-//       "version": "7.0.0-beta.0"
-//     }
-//   ]
-// ]
-// },
