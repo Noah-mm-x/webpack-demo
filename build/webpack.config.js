@@ -148,6 +148,7 @@ module.exports = {
       jQuery: 'jquery',
       'window.jQuery': 'jquery',
       'window.$': 'jquery',
+      _join: ['lodash','join']
     }),
   ],
   optimization: {

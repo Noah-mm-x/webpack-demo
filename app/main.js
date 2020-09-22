@@ -60,3 +60,9 @@
 // const dom = $('<div>')
 // dom.html(_.join([111, 'aaa11'], ' '))
 // $('body').append(dom)
+
+// shimming
+import _ from "lodash"
+import $ from "jquery"
+import { ui } from './ui'
+ui()
