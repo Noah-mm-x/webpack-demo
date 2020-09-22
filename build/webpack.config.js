@@ -26,6 +26,13 @@ module.exports = {
     publicPath: website.publicPath, //publicPath：主要作用就是处理静态文件路径的。
     chunkFilename: '[name].chunk.js'
   },
+  resolve:{
+    extensions: ['.js','.json'],
+    alias:{
+      '@img': path.resolve(__dirname,'../app/images/')
+      // '@img': '../app/images/'
+    }
+  },
   stats: {
     //简化打包信息
     modules: false,

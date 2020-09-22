@@ -50,3 +50,6 @@
 import "./style.less";
 import "./style1.css";
 console.log('main');
+import img from '@img/1.jpg'
+// import img from './images/1.jpg'
+console.log(img);
