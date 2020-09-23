@@ -22,9 +22,7 @@ module.exports = {
   },
   output: {
     path: __dirname + "/../distTmp",
-    filename: "[name].[contenthash:5].js",
     publicPath: website.publicPath, //publicPath：主要作用就是处理静态文件路径的。
-    // chunkFilename: '[name].[contenthash:5].js'
   },
   resolve: {
     extensions: ['.js', '.json'],
@@ -107,12 +105,9 @@ module.exports = {
           // {
           //   loader: "imports-loader?this=>window",
           // }
+          // 改变this指向，指向window
           loader: 'imports-loader',
           options: {
-            // imports: {
-            //   moduleName: 'jquery',
-            //   name: '$',
-            // },
             wrapper: 'window',
           }
         }
@@ -194,13 +189,12 @@ module.exports = {
       // maxInitialRequests: 3,
       // automaticNameDelimiter: '~',
       // name: true,
-      cacheGroups: {
-        vendors: {
-          test: /[\\/]node_modules[\\/]/,
-          priority: -10,
-          filename: 'vendors.[contenthash:5].js',
-        },
-      }
+      // cacheGroups: {
+      //   vendors: {
+      //     test: /[\\/]node_modules[\\/]/,
+      //     priority: -10,
+      //     filename: 'vendors.[contenthash:5].js',
+      //   },
       //   default: {
       //     minChunks: 2,
       //     priority: -20,
@@ -213,3 +207,4 @@ module.exports = {
   // 不提示包过大的警告信息
   performance: false
 };
+

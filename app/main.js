@@ -68,3 +68,4 @@
 // ui()
 // require('imports-loader?this=>window');
 console.log(this);
+console.log(process.env.NODE_ENV);
