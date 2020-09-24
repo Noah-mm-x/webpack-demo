@@ -18,7 +18,8 @@ const website = {
 module.exports = {
   entry: {
     // lodash: __dirname + "/../app/lodash.js",
-    main: __dirname + "/../app/main.js"
+    main: __dirname + "/../app/main.js",
+    list: __dirname + "/../app/list.js"
   },
   output: {
     path: __dirname + "/../distTmp",
@@ -116,17 +117,19 @@ module.exports = {
   },
   plugins: [
     new HTMLWebpackPlugin({
-      // 使用了OptimizeCSSAssetsPlugin，就会导致下面报错
-      // minify: {
-      //   //压缩html文件
-      //   removeAttributeQuotes: true, //removeAttrubuteQuotes是去掉属性的双引号。
-      // },
-      // inject: false, // 禁用自动注入
       minify: false,
       hash: true, //为了开发中js有缓存效果，所以加入hash，这样可以有效避免缓存JS。
       filename: "index.html",
       template: "./app/index.html",
       // favicon: "./app/favicon.ico",
+      chunks: ['runtime', 'vendors', 'main']
+    }),
+    new HTMLWebpackPlugin({
+      minify: false,
+      hash: true,
+      filename: "list.html",
+      template: "./app/list.html",
+      chunks: ['runtime', 'vendors', 'list']
     }),
     // 清理上次打包文件
     new CleanWebpackPlugin(),
