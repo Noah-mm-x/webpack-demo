@@ -10,7 +10,7 @@ const glob = require("glob");
 const path = require("path");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const CompressionPlugin = require("compression-webpack-plugin");
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const website = {
   // publicPath: "http://localhost:8080/",
   publicPath: "",
@@ -98,20 +98,20 @@ module.exports = {
           },
         ]
       },
-      {
-        test: require.resolve('./../app/main.js'),
-        use: {
-          // 这种方法会报错
-          // {
-          //   loader: "imports-loader?this=>window",
-          // }
-          // 改变this指向，指向window
-          loader: 'imports-loader',
-          options: {
-            wrapper: 'window',
-          }
-        }
-      }
+      // {
+      //   test: require.resolve('./../app/main.js'),
+      //   use: {
+      //     // 这种方法会报错
+      //     // {
+      //     //   loader: "imports-loader?this=>window",
+      //     // }
+      //     // 改变this指向，指向window
+      //     loader: 'imports-loader',
+      //     options: {
+      //       wrapper: 'window',
+      //     }
+      //   }
+      // }
     ],
   },
   plugins: [
@@ -156,7 +156,7 @@ module.exports = {
       threshold: 10240, //只处理比这个值大的资源。按字节计算
       minRatio: 0.8, //只有压缩率比这个值小的资源才会被处理
     }),
-    // new BundleAnalyzerPlugin()
+    // new BundleAnalyzerPlugin(),
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery',

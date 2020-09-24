@@ -1,5 +1,5 @@
 // 这里有坑，默认的引入，不是方法，现在是个对象
-const merge = require('webpack-merge').merge
+const { merge } = require('webpack-merge')
 const config = require('./webpack.config.js')
 const devConfig = {
   mode: "development",

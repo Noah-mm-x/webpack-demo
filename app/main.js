@@ -55,11 +55,11 @@
 // console.log(img);
 
 // caching
-// import _ from "lodash"
-// import $ from "jquery"
-// const dom = $('<div>')
-// dom.html(_.join([111, 'aaa11'], ' '))
-// $('body').append(dom)
+import _ from "lodash"
+import $ from "jquery"
+const dom = $('<div>')
+dom.html(_.join([111, 'aaa11'], ' '))
+$('body').append(dom)
 
 // shimming
 // import _ from "lodash"
@@ -67,5 +67,5 @@
 // import { ui } from './ui'
 // ui()
 // require('imports-loader?this=>window');
-console.log(this);
-console.log(process.env.NODE_ENV);
+// console.log(this);
+// console.log(process.env.NODE_ENV);

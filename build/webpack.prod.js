@@ -1,4 +1,4 @@
-const merge = require('webpack-merge').merge
+const { merge } = require('webpack-merge')
 const config = require('./webpack.config.js')
 const prodConfig = {
   mode: "production",
@@ -6,6 +6,8 @@ const prodConfig = {
   // devtool: "cheap-module-source-map",
   // devtool: "cheap-module-eval-source-map",
   output: {
+    // filename: "[name].[chunkhash:5].js",
+    // chunkFilename: '[name].[chunkhash:5].js'
     filename: "[name].[contenthash:5].js",
     chunkFilename: '[name].[contenthash:5].js'
   },
