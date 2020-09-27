@@ -19,7 +19,8 @@ module.exports = {
   entry: {
     // lodash: __dirname + "/../app/lodash.js",
     main: __dirname + "/../app/main.js",
-    list: __dirname + "/../app/list.js"
+    list: __dirname + "/../app/list.js",
+    common: __dirname + "/../app/common.js"
   },
   output: {
     path: __dirname + "/../distTmp",
@@ -122,14 +123,14 @@ module.exports = {
       filename: "index.html",
       template: "./app/index.html",
       // favicon: "./app/favicon.ico",
-      chunks: ['runtime', 'vendors', 'main']
+      chunks: ['runtime', 'vendors', 'main', 'common']
     }),
     new HTMLWebpackPlugin({
       minify: false,
-      hash: true,
+      hash: true, 
       filename: "list.html",
       template: "./app/list.html",
-      chunks: ['runtime', 'vendors', 'list']
+      chunks: ['runtime', 'vendors', 'list', 'common']
     }),
     // 清理上次打包文件
     new CleanWebpackPlugin(),
@@ -183,29 +184,29 @@ module.exports = {
     ],
     usedExports: true,
     // 代码分割
-    splitChunks: {
-      chunks: "all",
-      // minSize: 30000,
-      // maxSize: 50000,
-      // minChunks: 1,
-      // maxAsyncRequests: 5,
-      // maxInitialRequests: 3,
-      // automaticNameDelimiter: '~',
-      // name: true,
-      // cacheGroups: {
-      //   vendors: {
-      //     test: /[\\/]node_modules[\\/]/,
-      //     priority: -10,
-      //     filename: 'vendors.[contenthash:5].js',
-      //   },
-      //   default: {
-      //     minChunks: 2,
-      //     priority: -20,
-      //     reuseExistingChunk: true,
-      //     filename: 'vendors.js',
-      //   }
-      // }
-    },
+    // splitChunks: {
+    //   chunks: "all",
+    //   // minSize: 30000,
+    //   // maxSize: 50000,
+    //   // minChunks: 1,
+    //   // maxAsyncRequests: 5,
+    //   // maxInitialRequests: 3,
+    //   // automaticNameDelimiter: '~',
+    //   // name: true,
+    //   // cacheGroups: {
+    //   //   vendors: {
+    //   //     test: /[\\/]node_modules[\\/]/,
+    //   //     priority: -10,
+    //   //     filename: 'vendors.[contenthash:5].js',
+    //   //   },
+    //   //   default: {
+    //   //     minChunks: 2,
+    //   //     priority: -20,
+    //   //     reuseExistingChunk: true,
+    //   //     filename: 'vendors.js',
+    //   //   }
+    //   // }
+    // },
   },
   // 不提示包过大的警告信息
   performance: false

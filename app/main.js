@@ -16,8 +16,16 @@
 //   console.log(item);
 // });
 
-// import _ from 'lodash'
-
+// chunkFilename: 
+// require.ensure(
+//   dependencies: String[],
+//   callback: function(require),
+//   errorCallback: function(error),
+//   chunkName: String
+// )
+// require.ensure(['./list'], () => {
+//   console.log(111);
+// }, 'list')
 // 懒加载
 // async function getComponent() {
 //   const { default: _ } = await import(/* webpackChunkName: "lodash" */ 'lodash')

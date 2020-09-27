@@ -1,5 +1,5 @@
 import './router.js'
 
-Router.route('/', function() {
-  
+Router.route('/list', function() {
+  $('#app').load("list.html");
 });

@@ -9,7 +9,7 @@ const prodConfig = {
     // filename: "[name].[chunkhash:5].js",
     // chunkFilename: '[name].[chunkhash:5].js'
     filename: "[name].[contenthash:5].js",
-    chunkFilename: '[name].[contenthash:5].js'
+    chunkFilename: '[name].chunk.js'
   },
   optimization: {
     splitChunks: {
