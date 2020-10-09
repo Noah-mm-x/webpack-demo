@@ -1,9 +1,9 @@
 // 配合@babel/preset-env使用
-// import "@babel/polyfill";
+import "@babel/polyfill";
 // import './a.css'
-// import "./common.css";
-// import "./style.less";
-// import "./images/1.jpg";
+import "./common.css";
+import "./style.less";
+import "./images/1.jpg";
 
 // import { add } from "./index.js"
 // add(12,3)
@@ -77,4 +77,32 @@
 // require('imports-loader?this=>window');
 // console.log(this);
 // console.log(process.env.NODE_ENV);
+
+import $ from "jquery"
+const listEl = $('.list')
+let str = '';
+for (let i = 0; i < 100; i++) {
+  str += `<li>${i}</li>`
+}
+listEl.html(str)
+
+const handleScroll = () => {
+  console.log(111);
+}
+const jl = (func, delay = 400) => {
+  let timer = null
+  return (...args) => {
+    let context = this
+    if (!timer) {
+      timer = setTimeout(() => {
+        func.apply(context, args)
+        timer = null
+        // clearTimeout(timer)
+      }, delay)
+    }
+  }
+}
+window.addEventListener('scroll', jl(handleScroll))
+// window.addEventListener('scroll', handleScroll)
+
 

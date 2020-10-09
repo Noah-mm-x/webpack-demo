@@ -1,5 +1,5 @@
-import './router.js'
+// import './router.js'
 
-Router.route('/list', function() {
-  $('#app').load("list.html");
-});
+// Router.route('/list', function() {
+//   $('#app').load("list.html");
+// });
