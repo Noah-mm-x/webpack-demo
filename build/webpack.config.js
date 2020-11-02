@@ -19,7 +19,7 @@ module.exports = {
   entry: {
     // lodash: __dirname + "/../app/lodash.js",
     main: __dirname + "/../app/main.js",
-    list: __dirname + "/../app/list.js",
+    // list: __dirname + "/../app/list.js",
     common: __dirname + "/../app/common.js"
   },
   output: {
@@ -86,7 +86,7 @@ module.exports = {
       //   test: /\.ico$/,
       //   loader: "file-loader",
       // },
-      // 解决的问题就是在hmtl文件中引入<img>标签
+      // 解决的问题就是在html文件中引入<img>标签
       {
         test: /\.(htm|html)$/,
         use: ["html-withimg-loader"],
@@ -125,13 +125,13 @@ module.exports = {
       // favicon: "./app/favicon.ico",
       chunks: ['runtime', 'vendors', 'main', 'common']
     }),
-    new HTMLWebpackPlugin({
-      minify: false,
-      hash: true, 
-      filename: "list.html",
-      template: "./app/list.html",
-      chunks: ['runtime', 'vendors', 'list', 'common']
-    }),
+    // new HTMLWebpackPlugin({
+    //   minify: false,
+    //   hash: true, 
+    //   filename: "list.html",
+    //   template: "./app/list.html",
+    //   chunks: ['runtime', 'vendors', 'list', 'common']
+    // }),
     // 清理上次打包文件
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({

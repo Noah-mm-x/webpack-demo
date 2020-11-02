@@ -1,8 +1,7 @@
 {
   "name": "web",
   "sideEffects": [
-    "*.css",
-    "*.less"
+    "./app/main.js"
   ],
   "version": "1.0.0",
   "description": "",

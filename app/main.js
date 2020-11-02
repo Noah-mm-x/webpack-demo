@@ -5,8 +5,8 @@ import "./common.css";
 import "./style.less";
 import "./images/1.jpg";
 
-// import { add } from "./index.js"
-// add(12,3)
+import { add } from "./index.js"
+add(12,3)
 
 // console.log(11);
 // let arr = {a:1,b:2}
@@ -78,31 +78,31 @@ import "./images/1.jpg";
 // console.log(this);
 // console.log(process.env.NODE_ENV);
 
-import $ from "jquery"
-const listEl = $('.list')
-let str = '';
-for (let i = 0; i < 100; i++) {
-  str += `<li>${i}</li>`
-}
-listEl.html(str)
+// import $ from "jquery"
+// const listEl = $('.list')
+// let str = '';
+// for (let i = 0; i < 100; i++) {
+//   str += `<li>${i}</li>`
+// }
+// listEl.html(str)
 
-const handleScroll = () => {
-  console.log(111);
-}
-const jl = (func, delay = 400) => {
-  let timer = null
-  return (...args) => {
-    let context = this
-    if (!timer) {
-      timer = setTimeout(() => {
-        func.apply(context, args)
-        timer = null
-        // clearTimeout(timer)
-      }, delay)
-    }
-  }
-}
-window.addEventListener('scroll', jl(handleScroll))
-// window.addEventListener('scroll', handleScroll)
+// const handleScroll = () => {
+//   console.log(111);
+// }
+// const jl = (func, delay = 400) => {
+//   let timer = null
+//   return (...args) => {
+//     let context = this
+//     if (!timer) {
+//       timer = setTimeout(() => {
+//         func.apply(context, args)
+//         timer = null
+//         // clearTimeout(timer)
+//       }, delay)
+//     }
+//   }
+// }
+// window.addEventListener('scroll', jl(handleScroll))
+// // window.addEventListener('scroll', handleScroll)
 
 
